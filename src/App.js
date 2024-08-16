@@ -4,6 +4,7 @@ import AppBar from './components/AppBar/AppBar';
 import AppControlsCounter from './components/AppControls/AppControlsCounter';
 import AppControlsDelete from './components/AppControls/AppControlsDelete';
 import AppControlsInputs from './components/AppControls/AppControlsInputs';
+import AppMealsList from './components/AppMealsList/AppMealsList';
 
 const App = () => {
   const[meals, setMeals] = useState([]);
@@ -33,12 +34,22 @@ const App = () => {
     setCalories(0);
   }
 
+  const deleteMealHandler = (id) => {
+    const oldMeals = [...meals];
+    const newMeals = oldMeals.filter(meal => meal.id !== id);
+
+    setMeals(newMeals);
+  }
+
   return (
     <div className="App">
       <AppBar/>
       <AppControlsCounter/>
       <AppControlsDelete/>
       <AppControlsInputs addMealsHandler = {addMealsHandler} mealName = {mealName} calories = {calories} setMealName = {setMealName} setCalories = {setCalories}/>
+      <div className="app_meals_container">
+        <AppMealsList meals = {meals} deleteMealHandler = {deleteMealHandler}/>
+      </div>
     </div>
   );
 };
