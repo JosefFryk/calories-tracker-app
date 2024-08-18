@@ -121,3 +121,39 @@ span{
   border-radius: 5px;
   border: 1px solid #000;
 }
+
+.app_modal {
+  width: 300px;
+  height: 250px;
+  background: #f4f4f4;
+  border: 1px solid rgba(0,0, 0, 2);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px;
+}
+
+.btn_close_modal {
+  padding: 5px;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  background: red;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  width: 90%;
+}
+
+.app_meals_container_select select {
+  outline: none;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 2); 
+}

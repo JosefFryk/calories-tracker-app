@@ -3,7 +3,7 @@ import React from "react";
 const AppMealsList = ({meals, deleteMealHandler}) => {
     return (
         <div className="app_meals_container_wrapper">
-            {meals.map((meal, index) => (
+            {meals?.map((meal, index) => (
                 <div key={index} className="app_meals_container_wrapper_inner">
                     <div>
                         {`${meal.mealName} : ${meal.calories}`}
