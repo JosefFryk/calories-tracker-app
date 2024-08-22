@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import AppBar from './components/AppBar/AppBar';
-import AppControlsCounter from './components/AppControls/AppControlsCounter';
-import AppControlsDelete from './components/AppControls/AppControlsDelete';
-import AppControlsInputs from './components/AppControls/AppControlsInputs';
-import AppMealsList from './components/AppMealsList/AppMealsList';
-import AppModal from './components/AppModal/AppModal';
-import AppMealsFilter from './components/AppMealsFilter/AppMealsFilter';
+import AppBar from '../../components/AppBar/AppBar';
+import AppControlsCounter from '../../components/AppControls/AppControlsCounter';
+import AppControlsDelete from '../../components/AppControls/AppControlsDelete';
+import AppControlsInputs from '../../components/AppControls/AppControlsInputs';
+import AppMealsList from '../../components/AppMealsList/AppMealsList';
+import AppModal from '../../components/AppModal/AppModal';
+import AppMealsFilter from '../../components/AppMealsFilter/AppMealsFilter';
 
-const App = () => {
+const Home = () => {
   const[meals, setMeals] = useState([]);
   const[mealName, setMealName] = useState("");
   const[calories, setCalories] = useState(0);
@@ -85,4 +85,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
